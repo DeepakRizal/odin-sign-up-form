@@ -11,5 +11,9 @@ confirmPassword.addEventListener("blur", function () {
     password.parentNode.appendChild(errorPara);
     password.style.borderColor = "red";
     confirmPassword.style.borderColor = "red";
+  } else {
+    password.style.borderColor = "green";
+    confirmPassword.style.borderColor = "green";
+    errorPara.textContent = "";
   }
 });
