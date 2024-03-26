@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "Norse Bold";
+  src: url("fonts/Norse-Bold.otf") format("opentype");
+  /* Optionally, you can provide additional font file formats for better browser compatibility */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+}
+
+.main-content {
+  flex: 3;
+}
+
+.sidebar {
+  background-image: url("https://images.unsplash.com/photo-1585202900225-6d3ac20a6962?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 100vh;
+  flex: 2;
+  position: relative;
+}
+.overlay {
+  background-color: black;
+  height: 100vh;
+  opacity: 0.3;
+}
+
+.logo-container {
+  position: absolute;
+  top: 25%;
+  padding: 30px;
+  background-color: rgba(51, 51, 51, 0.4);
+  width: 100%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  height: 100px;
+  width: auto;
+}
+.logo-header {
+  position: relative;
+  color: white;
+  font-family: Norse Bold, sans-serif;
+  letter-spacing: 3px;
+  font-size: 5rem;
+}
+
+.main-content {
+  background-color: rgb(251, 244, 244);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main-content > p,
+.main-content > p + p {
+  padding-left: 2rem;
+  font-size: 25px;
+}
+
+.main-content > p {
+  margin-bottom: 20px;
+  width: clamp(45ch, 50%, 75ch);
+}
+
+.main-content > p + p {
+  margin-bottom: 50px;
+}
+
+.form {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+  padding-left: 2rem;
+}
+
+.create-account {
+  width: 100px;
+  padding: 20px 50px;
+  border-radius: 5px;
+  box-sizing: content-box;
+  border: none;
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 2rem;
+  color: rgb(247, 243, 243);
+  background-color: #596d48;
+}
+
+.create-account + p {
+  margin-top: 10px;
+}
+
+.create-account + p a {
+  color: #596d48;
+  text-decoration: none;
+}
+.form-groups {
+  display: flex;
+  gap: 50px;
+}
+
+.form-groups div {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-groups label {
+  color: gray;
+  text-transform: uppercase;
+}
+
+.form-groups input {
+  padding: 10px 100px 10px 10px;
+  border: 2px solid #e5e7eb;
+  border-radius: 5px;
+  outline: none;
+}
+
+.form-groups input:valid {
+  border-color: green;
+}
+
+.form-groups input:invalid {
+  border-color: red;
+}
+
+.form-groups input:focus {
+  border-color: #6a8dbe;
+}
+
+.error {
+  color: red;
+}
